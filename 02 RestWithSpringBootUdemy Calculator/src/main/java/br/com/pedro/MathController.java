@@ -12,7 +12,7 @@ import br.com.pedro.request.converters.NumberConverter;
 @RestController
 public class MathController {
 	
-	private SimpleMath math = new SimpleMath();
+private SimpleMath math = new SimpleMath();
 	
 	@RequestMapping(value="/sum/{numberOne}/{numberTwo}", method=RequestMethod.GET)
 	public Double sum(@PathVariable("numberOne") String numberOne, @PathVariable("numberTwo") String numberTwo) throws Exception {
@@ -63,5 +63,5 @@ public class MathController {
 		}
 		return math.squareRoot(NumberConverter.covertToDouble(number));		
 	}
-
+	
 }
